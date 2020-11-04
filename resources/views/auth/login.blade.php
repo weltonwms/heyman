@@ -10,7 +10,7 @@
   <link rel="stylesheet" type="text/css" href="{{ asset('template/css/font-awesome-4.7.0/css/font-awesome.min.css') }}">
      <!--CSS App-->
   <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
-  <title>Login - Dog & Cia</title>
+  <title>Login - {{ config('app.name', 'Laravel') }}</title>
   </head>
   <body>
     <section class="material-half-bg">
@@ -18,8 +18,8 @@
     </section>
     <section class="login-content">
       <div class="logo">
-        {{-- <h1>Dog & Cia</h1> --}}
-      <img src="{{asset('img/logo_branco.png')}}" alt="logo Dog e Cia">
+        {{-- <h1>{{ config('app.name', 'Laravel') }}</h1> --}}
+      <img src="{{asset('img/logo.png')}}" alt="logo {{ config('app.name', 'Laravel') }}">
       </div>
       <div class="login-box">
         <form method="POST" class="login-form" action="{{ route('login') }}">
